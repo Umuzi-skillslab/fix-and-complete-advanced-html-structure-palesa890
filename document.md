@@ -1,51 +1,55 @@
-# Advanced Media Production Website - Capstone Project
+# Professional Media Production Website - Capstone Project
 
-## Project Overview
-This project involved refactoring a legacy codebase into a high-performance, semantic, and fully responsive Media Production website. The focus was on HTML5 accessibility, advanced CSS layouts (Flexbox/Grid), and interactive animations.
+## 1. Project Overview
+This website is a professional digital storefront for a Media Production Company. Its purpose is to showcase high-fidelity video and audio portfolios, provide service information, and capture client leads through an advanced, accessible contact system. 
 
-## 9-Criteria Implementation Summary
+## 2. Issues Found in Starter Code
+The original codebase contained over 25 critical errors:
+- **Structural:** Reliance on `<div>` tags with no semantic meaning.
+- **Accessibility:** Missing `<label>` tags and `alt` attributes for images.
+- **Technical:** Missing metadata (viewport, description) and broken video/audio elements.
+- **Styling:** No responsive design, no Flexbox/Grid, and no interactive visual feedback.
 
-### 1. Semantic HTML & Metadata
-- Replaced all generic `<div>` containers with `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>`.
-- Added `<meta charset="UTF-8">` and `viewport` for mobile responsiveness.
-- **Status:** Validated via W3C Service.
+## 3. Fixes and Implementations
+I refactored the entire project to meet HTML5 standards:
+- **Semantic Overhaul:** Implemented `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>`.
+- **Media Fixes:** Added `controls` to video/audio and used `<figure>`/`<figcaption>` for 6+ images.
+- **Form Upgrade:** Created a two-part form with 7+ input types and group-level `<fieldset>` tags.
 
-### 2. Media Integration
-- **Video:** Two videos implemented with `controls`, `poster` attributes, and fallback text.
-- **Audio:** Audio player added for studio samples.
-- **Iframe:** Google Maps location embed included.
-- **Figures:** All 6+ portfolio/client images use `<figure>` and `<figcaption>`.
+## 4. Advanced Layouts
+- **Flexbox (2+ Layouts):** - **Navigation:** Uses `justify-content: space-between` to separate the branding from links.
+  - **Services:** Uses `flex-wrap: wrap` and `justify-content: space-around` to ensure service cards stack beautifully on mobile.
+- **CSS Grid:** - **Portfolio/Testimonials:** Implemented a responsive grid using `repeat(auto-fit, minmax(300px, 1fr))`, allowing the layout to rearrange itself without manual media queries for every screen size.
 
-### 3. Advanced Forms & Validation
-- Implemented 7+ input types: `text`, `email`, `tel`, `date`, `radio`, `checkbox`, and `select`.
-- All inputs have associated `<label>` elements for accessibility.
-- Added `required`, `pattern`, and `min/max` validation attributes.
+## 5. Selectors & Pseudo-classes
+- **Selectors used:** Element (`body`), Class (`.nav`), ID (`#contact`), Attribute (`a[href]`), and Child (`.container > p`).
+- **Pseudo-classes:** `:hover` (navigation), `:focus` (form inputs), `:active` (button click), `:nth-child` (zebra-striping testimonials), and `:not` (styling non-active links).
 
-### 4. Flexbox Layouts
-- **Navigation:** Header uses Flexbox for alignment and distribution.
-- **Services:** The "What We Do" section uses `flex-wrap` for responsive stacking.
+## 6. Animations, Effects, & Transforms
+- **Transforms:** Applied `scale(1.1)` on hover, `rotate(2deg)` on images, and `translateY(2px)` for button feedback.
+- **Transitions:** Smooth `0.3s` eases on all interactive states (color, shadows, transforms).
+- **Animations:** A multi-step `@keyframes slideIn` for the Hero text and a 3-dot `pulse-wave` loading animation using staggered delays.
+- **Text Effects:** Integrated `text-shadow` for readability and `linear-gradient` overlays on the hero background.
 
-### 5. CSS Grid Layouts
-- **Media Gallery:** Uses CSS Grid with `auto-fit` and `minmax` for a fluid, responsive layout.
+## 7. Accessibility & Compatibility
+- **Accessibility:** Added ARIA roles, ensured 100% label-to-input associations, and maintained high color contrast.
+- **Cross-Browser:** Tested on **Chrome** and **Firefox**. Used `standard-box-sizing` and generic font-families to ensure consistent rendering.
+- **W3C Validation:** Both HTML and CSS files pass with zero errors.
 
-### 6. Selectors & Pseudo-classes
-- Used 5+ selector types: Element, Class, ID, Attribute, and Child (`>`).
-- Implemented 5+ pseudo-classes: `:hover`, `:focus`, `:active`, `:nth-child`, and `:not`.
+## 8. How to View Locally
+1. Clone this repository.
+2. Ensure the file structure matches the `/css`, `/images`, and `/media` folders.
+3. Open `index.html` in any modern browser (Chrome recommended).
 
-### 7. CSS Effects & Animations
-- **Effects:** Text-shadows on Hero text and linear-gradient overlays.
-- **Transforms:** `scale`, `rotate`, and `translate` used on gallery and buttons.
-- **Animations:** `@keyframes slideIn` for page entry and a CSS loading spinner.
+## 9. Reflection & Challenges
+The greatest challenge was implementing the **CSS Grid** for the testimonial section while maintaining image aspect ratios. I solved this by using `object-fit: cover` on images within the grid items. Another challenge was the Git Permission 403 error, which I resolved by correctly re-routing my local origin to my personal fork rather than the organization's main repo.
 
-### 8. Cross-Browser & Debugging
-- Tested in **Google Chrome** and **Mozilla Firefox**.
-- HTML/CSS validated with 0 errors. Screenshots included in `/screenshots`.
+## 10. Project Screenshots
 
-### 9. Code Quality
-- Consistent indentation used throughout.
-- CSS is organized by section (Variables, Reset, Layout, Components).
-- Meaningful comments explain complex CSS logic.
-
-## How to Run
-1. Clone the repository.
-2. Open `index.html` in any modern web browser.
+| Feature | Screenshot Link |
+| :--- | :--- |
+| **Desktop View** | `screenshots/homepage-desktop.png` |
+| **Mobile View** | `screenshots/homepage-mobile.png` |
+| **Form Validation** | `screenshots/form-validation.png` |
+| **Grid & Media** | `screenshots/grid-layout.png` |
+| **Browser Comparison** | `screenshots/browser-check.png` |
