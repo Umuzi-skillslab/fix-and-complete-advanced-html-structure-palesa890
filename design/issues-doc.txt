@@ -3,7 +3,10 @@ DOCUMENT: Issues Identification and Resolution Report
 AUTHOR: Palesa
 DATE: March 27, 2026
 
+======================================================================
 OVERVIEW:
+======================================================================
+
 The following 28 issues were identified in the starter codebase across HTML, 
 CSS, and Media accessibility. Each issue was resolved to meet "Level 3" 
 capstone requirements.
@@ -44,7 +47,30 @@ capstone requirements.
 27. ISSUE: Missing Audio content. FIX: Integrated <audio> with fallback text.
 28. ISSUE: Missing Location data. FIX: Embedded Google Maps <iframe> with lazy loading.
 
---- CONCLUSION ---
-All identified errors were fixed and validated against W3C standards. The site 
-now maintains a 100% semantic structure and is fully responsive across Chrome 
-and Firefox.
+=====================================================================
+REFLECTION: CHALLENGES & SOLUTIONS
+=====================================================================
+
+Challenge 1: Mastering CSS Grid Responsiveness
+The testimonial grid on the Media page initially looked cluttered on mobile. By implementing 
+the 'repeat(auto-fit, minmax(300px, 1fr))' function, I allowed the layout to calculate 
+columns automatically. This solved the issue of content overflowing on small screens.
+
+Challenge 2: Debugging the Sticky Header
+The navigation header would slide under the video elements when scrolling. I solved this 
+by applying a high 'z-index: 1000' and 'position: sticky' to the header. This ensures 
+the site remains navigable regardless of scroll depth.
+
+Challenge 3: Implementing Multi-Step Animations
+The Pulse-Wave loader felt robotic at first. By using the ':nth-child' pseudo-selector 
+with staggered 'animation-delay' values, I created a fluid wave effect that feels 
+professional and premium.
+
+Challenge 4: Form Validation Logic
+I encountered a 405 error when submitting the form locally. I resolved this by switching 
+the method to 'GET' for static testing and focused on triggering browser-native validation 
+bubbles to ensure data integrity.
+
+=====================================================================
+CONCLUSION:
+The website is now fully optimized, passing all W3C validation tests for both HTML and CSS.
