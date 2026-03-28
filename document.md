@@ -48,8 +48,9 @@ The greatest challenge was implementing the **CSS Grid** for the testimonial sec
 
 | Feature | Screenshot Link |
 | :--- | :--- |
-| **Desktop View** | `screenshots/homepage-desktop.png` |
-| **Mobile View** | `screenshots/homepage-mobile.png` |
-| **Form Validation** | `screenshots/form-validation.png` |
-| **Grid & Media** | `screenshots/grid-layout.png` |
-| **Browser Comparison** | `screenshots/browser-check.png` |
+| **Desktop View** | `screenshots/desktop1.png` `screenshots/desktop2.png` `screenshots/desktop3.png` `screenshots/desktop4.png` |
+| **Mobile View** | `screenshots/mobile1.png` `screenshots/mobile2.png` |
+| **Form Validation** | `screenshots/formVal1.png` |
+| **Grid & Flexbox** | `screenshots/css-grid1.png` `screenshots/flex1.png` |
+| **Media** | `screenshots/video1.png` `screenshots/video2.png` `screenshots/animate1.png` `screenshots/animate2.png` `screenshots/audio1.png`|
+| **Browser Comparison** | `screenshots/diffBrowsers1.png` |
