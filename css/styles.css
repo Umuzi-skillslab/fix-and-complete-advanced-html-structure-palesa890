@@ -155,7 +155,46 @@ button:active {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Loading Animation (Bonus) */
+/* --- BONUS: Creative Pulse Animation --- */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.pulse-loader {
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    /* Keyframe Animation with 3 steps */
+    animation: pulse-wave 1.2s infinite ease-in-out;
+}
+
+/* Staggering the animation for each dot */
+.pulse-loader:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pulse-loader:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse-wave {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5); /* Transform: Scale */
+        opacity: 1;
+        background-color: #0056b3; /* Color shift */
+    }
+}
+
+/* Loading Animation (Bonus)
 .loader {
     width: 50px;
     height: 50px;
@@ -167,7 +206,7 @@ button:active {
 
 @keyframes spin {
     100% { transform: rotate(360deg); }
-}
+} */
 
 /* 8. Responsive Design (Media Queries) */
 @media (max-width: 768px) {
