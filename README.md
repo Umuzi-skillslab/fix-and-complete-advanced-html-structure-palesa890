@@ -1,46 +1,56 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/uFImwIHI)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23230992&assignment_repo_type=AssignmentRepo)
-# Media Production Website Starter Code
+# Professional Media Production Website - Capstone Project
 
-This is the starter codebase for your media production website project. The code is approximately 70% complete but contains errors, omissions, and areas that need significant improvement.
+## 1. Project Overview
+This website is a professional digital storefront for a Media Production Company. Its purpose is to showcase high-fidelity video and audio portfolios, provide service information, and capture client leads through an advanced, accessible contact system. 
 
-## What's Included
+## 2. Issues Found in Starter Code
+The original codebase contained over 25 critical errors:
+- **Structural:** Reliance on `<div>` tags with no semantic meaning.
+- **Accessibility:** Missing `<label>` tags and `alt` attributes for images.
+- **Technical:** Missing metadata (viewport, description) and broken video/audio elements.
+- **Styling:** No responsive design, no Flexbox/Grid, and no interactive visual feedback.
 
-- `index.html` - Home page (incomplete, semantic issues)
-- `about.html` - About/Services page (incomplete, missing flexbox/grid layouts)
-- `media.html` - Media gallery page (incomplete, missing media elements)
-- `contact.html` - Contact page (incomplete form with validation issues)
-- `css/styles.css` - Stylesheet (incomplete, missing advanced features)
-- `images/` folder - Placeholder folder for your images
-- `media/` folder - Placeholder folder for video/audio files
+## 3. Fixes and Implementations
+I refactored the entire project to meet HTML5 standards:
+- **Semantic Overhaul:** Implemented `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>`.
+- **Media Fixes:** Added `controls` to video/audio and used `<figure>`/`<figcaption>` for 6+ images.
+- **Form Upgrade:** Created a two-part form with 7+ input types and group-level `<fieldset>` tags.
 
-## Your Task
+## 4. Advanced Layouts
+- **Flexbox (2+ Layouts):** - **Navigation:** Uses `justify-content: space-between` to separate the branding from links.
+  - **Services:** Uses `flex-wrap: wrap` and `justify-content: space-around` to ensure service cards stack beautifully on mobile.
+- **CSS Grid:** - **Portfolio/Testimonials:** Implemented a responsive grid using `repeat(auto-fit, minmax(300px, 1fr))`, allowing the layout to rearrange itself without manual media queries for every screen size.
 
-Review the provided code carefully and:
-1. Identify and fix all HTML and CSS errors
-2. Complete all missing advanced requirements
-3. Add required media elements (video, audio, iframe)
-4. Implement flexbox and CSS Grid layouts
-5. Add CSS effects, transforms, transitions, and animations
-6. Expand selector usage and add pseudo-classes
-7. Improve code quality and organisation
-8. Test across multiple browsers and validate all code
+## 5. Selectors & Pseudo-classes
+- **Selectors used:** Element (`body`), Class (`.nav`), ID (`#contact`), Attribute (`a[href]`), and Child (`.container > p`).
+- **Pseudo-classes:** `:hover` (navigation), `:focus` (form inputs), `:active` (button click), `:nth-child` (zebra-striping testimonials), and `:not` (styling non-active links).
 
-## Getting Started
+## 6. Animations, Effects, & Transforms
+- **Transforms:** Applied `scale(1.1)` on hover, `rotate(2deg)` on images, and `translateY(2px)` for button feedback.
+- **Transitions:** Smooth `0.3s` eases on all interactive states (color, shadows, transforms).
+- **Animations:** A multi-step `@keyframes slideIn` for the Hero text and a 3-dot `pulse-wave` loading animation using staggered delays.
+- **Text Effects:** Integrated `text-shadow` for readability and `linear-gradient` overlays on the hero background.
 
-1. Review all HTML and CSS files thoroughly
-2. Run HTML through W3C Validator to identify errors
-3. Run CSS through W3C CSS Validator
-4. Identify missing advanced features (flexbox, grid, animations, etc.)
-5. Test in multiple browsers
-6. Fix all issues and complete missing requirements
+## 7. Accessibility & Compatibility
+- **Accessibility:** Added ARIA roles, ensured 100% label-to-input associations, and maintained high color contrast.
+- **Cross-Browser:** Tested on **Chrome** and **Firefox**. Used `standard-box-sizing` and generic font-families to ensure consistent rendering.
+- **W3C Validation:** Both HTML and CSS files pass with zero errors.
 
-## Notes
+## 8. How to View Locally
+1. Clone this repository.
+2. Ensure the file structure matches the `/css`, `/images`, and `/media` folders.
+3. Open `index.html` in any modern browser (Chrome recommended).
 
-- You will need to add your own video and audio files to the `media/` folder
-- You will need to add images to the `images/` folder
-- The starter code intentionally has issues for you to discover and fix
-- Advanced features like flexbox, grid, animations are missing or incomplete
-- Refer to the project requirements document for all specifications
+## 9. Reflection & Challenges
+The greatest challenge was implementing the **CSS Grid** for the testimonial section while maintaining image aspect ratios. I solved this by using `object-fit: cover` on images within the grid items. Another challenge was the Git Permission 403 error, which I resolved by correctly re-routing my local origin to my personal fork rather than the organization's main repo.
 
-Good luck!
+## 10. Project Screenshots
+
+| Feature | Screenshot Link |
+| :--- | :--- |
+| **Desktop View** | `screenshots/desktop1.png` `screenshots/desktop2.png` `screenshots/desktop3.png` `screenshots/desktop4.png` |
+| **Mobile View** | `screenshots/mobile1.png` `screenshots/mobile2.png` |
+| **Form Validation** | `screenshots/formVal1.png` |
+| **Grid & Flexbox** | `screenshots/css-grid1.png` `screenshots/flex1.png` |
+| **Media** | `screenshots/video1.png` `screenshots/video2.png` `screenshots/animate1.png` `screenshots/animate2.png` `screenshots/audio1.png`|
+| **Browser Comparison** | `screenshots/diffBrowsers1.png` |
