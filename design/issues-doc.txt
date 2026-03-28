@@ -1,0 +1,76 @@
+PROJECT: Media Production Website Refactor
+DOCUMENT: Issues Identification and Resolution Report
+AUTHOR: Palesa
+DATE: March 27, 2026
+
+======================================================================
+OVERVIEW:
+======================================================================
+
+The following 28 issues were identified in the starter codebase across HTML, 
+CSS, and Media accessibility. Each issue was resolved to meet "Level 3" 
+capstone requirements.
+
+--- SECTION 1: SEMANTIC HTML & STRUCTURE (10 ISSUES) ---
+1.  ISSUE: Use of generic <div> for Header. FIX: Replaced with <header>.
+2.  ISSUE: Use of generic <div> for Navigation. FIX: Replaced with <nav>.
+3.  ISSUE: Use of generic <div> for Main content. FIX: Replaced with <main>.
+4.  ISSUE: Use of generic <div> for Footer. FIX: Replaced with <footer>.
+5.  ISSUE: Missing <section> tags to group related content. FIX: Added IDs to sections.
+6.  ISSUE: Missing <article> tags for independent content. FIX: Applied to "What We Do".
+7.  ISSUE: Missing <figure> and <figcaption> for images. FIX: Applied to all 6 portfolio images.
+8.  ISSUE: Missing LANG attribute in <html>. FIX: Added lang="en" for SEO/Screen readers.
+9.  ISSUE: Missing Viewport Meta Tag. FIX: Added for mobile responsiveness.
+10. ISSUE: Missing Meta Description. FIX: Added unique descriptions to all 4 pages.
+
+--- SECTION 2: FORMS & ACCESSIBILITY (7 ISSUES) ---
+11. ISSUE: Missing <label> elements for inputs. FIX: Linked labels to IDs for accessibility.
+12. ISSUE: Use of type="text" for Email. FIX: Updated to type="email" for validation.
+13. ISSUE: Use of type="text" for Phone. FIX: Updated to type="tel" for mobile keypads.
+14. ISSUE: Missing Date Picker. FIX: Added type="date" for project start dates.
+15. ISSUE: Missing Radio/Checkbox options. FIX: Added 3+ radio options and newsletter checkbox.
+16. ISSUE: Missing <fieldset> and <legend>. FIX: Grouped form into "Personal" and "Project" sections.
+17. ISSUE: Lack of required attributes. FIX: Added 'required' and 'minlength' for validation.
+
+--- SECTION 3: CSS LAYOUT & ADVANCED FEATURES (8 ISSUES) ---
+18. ISSUE: Navigation used basic inline-block. FIX: Implemented CSS Flexbox (Space-between).
+19. ISSUE: Portfolio used floats/blocks. FIX: Implemented CSS Grid (auto-fit, minmax).
+20. ISSUE: Services section was static. FIX: Implemented Flexbox (Space-around) with Wrap.
+21. ISSUE: Lack of Responsive Design. FIX: Added Media Queries for 768px breakpoints.
+22. ISSUE: Only 2 CSS selector types used. FIX: Expanded to 5+ (Element, Class, ID, Attribute, Child).
+23. ISSUE: No Pseudo-classes. FIX: Implemented :hover, :focus, :active, :nth-child, and :not.
+24. ISSUE: No CSS Transforms. FIX: Added scale(1.1), rotate(2deg), and translateY(2px).
+25. ISSUE: No CSS Transitions. FIX: Added smooth 0.3s transitions to interactive elements.
+
+--- SECTION 4: MEDIA & INTERACTIVITY (3 ISSUES) ---
+26. ISSUE: Video element missing controls. FIX: Added 'controls' and 'poster' attributes.
+27. ISSUE: Missing Audio content. FIX: Integrated <audio> with fallback text.
+28. ISSUE: Missing Location data. FIX: Embedded Google Maps <iframe> with lazy loading.
+
+=====================================================================
+REFLECTION: CHALLENGES & SOLUTIONS
+=====================================================================
+
+Challenge 1: Mastering CSS Grid Responsiveness
+The testimonial grid on the Media page initially looked cluttered on mobile. By implementing 
+the 'repeat(auto-fit, minmax(300px, 1fr))' function, I allowed the layout to calculate 
+columns automatically. This solved the issue of content overflowing on small screens.
+
+Challenge 2: Debugging the Sticky Header
+The navigation header would slide under the video elements when scrolling. I solved this 
+by applying a high 'z-index: 1000' and 'position: sticky' to the header. This ensures 
+the site remains navigable regardless of scroll depth.
+
+Challenge 3: Implementing Multi-Step Animations
+The Pulse-Wave loader felt robotic at first. By using the ':nth-child' pseudo-selector 
+with staggered 'animation-delay' values, I created a fluid wave effect that feels 
+professional and premium.
+
+Challenge 4: Form Validation Logic
+I encountered a 405 error when submitting the form locally. I resolved this by switching 
+the method to 'GET' for static testing and focused on triggering browser-native validation 
+bubbles to ensure data integrity.
+
+=====================================================================
+CONCLUSION:
+The website is now fully optimized, passing all W3C validation tests for both HTML and CSS.

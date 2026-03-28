@@ -1,49 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our media production team and the professional video, audio, and multimedia services we provide.">
+
     <title>About Us</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+     <header class="top">
         <h1>About Our Services</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
+    <main>
+        <section id="team">
+            <h2>Our Team</h2>
+            <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
+        </section>
+
+        <hr>
+
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services-container">
+                <article>
+                    <h3>Video Production</h3>
+                    <p>Professional video creation for corporate and creative projects.</p>
+                </article>
+
+                <article>
+                    <h3>Audio Recording</h3>
+                    <p>Studio-quality audio production and editing services.</p>
+                </article>
+
+                <article>
+                    <h3>Multimedia Solutions</h3>
+                    <p>Comprehensive digital strategies and interactive content creation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/work1.jpg" alt="Cinematography project for local brand">
+                    <figcaption>Branding Campaign - 2024</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/work2.jpg" alt="Podcast recording session">
+                    <figcaption>Podcast Production Suite</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/work3.jpg" alt="Behind the scenes of a music video">
+                    <figcaption>On-Set Production</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
     
-    <div>
-        <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
-        </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
-        <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+    <footer class="bottom">
+        <address>
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+        </address>
+        <p>&copy; 2026 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>

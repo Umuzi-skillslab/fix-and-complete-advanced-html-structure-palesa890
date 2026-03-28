@@ -1,40 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Media Production Company for inquiries about video, audio, and multimedia projects. Get a quote today.">
+    
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="top">
         <h1>Contact Us</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
-            
-            <button>Submit</button>
-        </form>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+       <main>
+        <section class="contact-form-section">
+            <h2>Get In Touch</h2>
+            <p>Fill out the form below and our production team will reach out within 24 hours.</p>
+
+            <form action="contact.html" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="555-0123">
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="service-type">Primary Service Needed:</label>
+                        <select id="service-type" name="service-type">
+                            <option value="video">Video Production</option>
+                            <option value="audio">Audio Recording</option>
+                            <option value="multimedia">Multimedia Solutions</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start-date">Desired Start Date:</label>
+                        <input type="date" id="start-date" name="start-date">
+                    </div>
+
+                    <div class="form-group">
+                        <p>Project Scale:</p>
+                        <input type="radio" id="small" name="scale" value="small">
+                        <label for="small">Small (Individual)</label><br>
+                        <input type="radio" id="large" name="scale" value="large">
+                        <label for="large">Large (Corporate)</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Sign up for our monthly production tips</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bottom">
+        <address>
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+        </address>
+        <p>&copy; 2026 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>
